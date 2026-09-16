@@ -1,0 +1,9 @@
+{
+  "schema_version": "apeb.dataset-manifest.v1",
+  "dataset_name": "apeb-synthetic-example-split",
+  "dataset_version": "1.0.0",
+  "license": "CC-BY-NC-ND-4.0",
+  "privacy_reviewed": true,
+  "representation": "split",
+  "notes": "Synthetic format example; no real user or product data."
+}

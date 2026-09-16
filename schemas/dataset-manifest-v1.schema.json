@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APeB dataset manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_name",
+    "dataset_version",
+    "license",
+    "privacy_reviewed",
+    "representation"
+  ],
+  "properties": {
+    "schema_version": {"const": "apeb.dataset-manifest.v1"},
+    "dataset_name": {"type": "string", "minLength": 1},
+    "dataset_version": {"type": "string", "minLength": 1},
+    "license": {"const": "CC-BY-NC-ND-4.0"},
+    "privacy_reviewed": {"type": "boolean"},
+    "representation": {"enum": ["combined", "split"]},
+    "source_url": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APeB evaluation sample v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sample_id",
+    "task",
+    "prompt",
+    "resources",
+    "answer_indices",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {"const": "apeb.eval.v1"},
+    "sample_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+    },
+    "task": {"const": "predict_order"},
+    "prompt": {"type": "string", "minLength": 1},
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["history", "candidates"],
+      "properties": {
+        "history": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "candidates": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string"}
+        }
+      }
+    },
+    "answer_indices": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "metadata": {"type": "object"}
+  }
+}

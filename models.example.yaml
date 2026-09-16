@@ -1,0 +1,18 @@
+# Public example only. Never put literal credentials or private endpoints here.
+BASIC_MODEL:
+  default:
+    model: gpt-4.1-mini
+    api_key: ${OPENAI_API_KEY}
+    base_url: ${OPENAI_BASE_URL}
+
+REASONING_MODEL:
+  default:
+    model: o4-mini
+    api_key: ${OPENAI_API_KEY}
+    base_url: ${OPENAI_BASE_URL}
+
+# An Azure entry can be added to a local copy using environment references:
+#   azure_endpoint: ${AZURE_OPENAI_ENDPOINT}
+#   api_version: ${OPENAI_API_VERSION}
+#   api_key: ${AZURE_OPENAI_API_KEY}
+#   base_url: ${AZURE_OPENAI_BASE_URL}

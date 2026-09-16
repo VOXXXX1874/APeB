@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+coverage/
+
+# Project environments and caches
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+models.local.yaml
+models.*.local.yaml
+env.yaml
+llm_configuration.yaml
+
+# Data and sensitive evaluation artifacts
+tmp/
+data/
+outputs/
+results/
+records/
+responses.jsonl
+traces.jsonl
+*.log
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
